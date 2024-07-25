@@ -1,0 +1,85 @@
+{% load static %}
+
+<footer>
+    <div class="container py-3 footer-container">
+        <div class="row justify-content-between">
+            <div class="col-12 col-lg-3 my-2">
+                <div class="container p-0">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-12 footer-li-a mb-3 d-flex justify-content-center justify-content-lg-start">
+                            <a href="{% url 'pages:lending' %}">
+                                <img src="{% static "assets/imgs/Testo-Aduna completo EFEFE5.png" %}" alt="logo"
+                                    class="logo">
+                            </a>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center justify-content-lg-start">
+                            <a href="#linkedin" class="me-2 text-decoration-none">
+                                <img src="{% static "assets/imgs/LinkedIn_icon EFEFE5.png" %}" alt="linkedin"
+                                    style="width: 31px;">
+                            </a>
+                            <a href="https://www.youtube.com/@aduna-hx8rw" class="me-2 text-decoration-none"
+                                target="_blank">
+                                <img src="{% static "assets/imgs/YouTube_Logo_2017.png" %}" alt="Youtube"
+                                    style="width: 137px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 my-2">
+                <div class="container p-0">
+                    <div class="row">
+                        <div class="col-12 footer-li-a text-center">
+                            <ul class="ps-0 text-center">
+                                <li class="ms-0"><a href="{% url "pages:lending" %}">Home</a></li>
+                                <li><a href="{% url "pages:contact" %}">Contact us</a></li>
+                                <li><a href="{% url "pages:terms" %}">Legal</a></li>
+                                <li><a href="{% url "pages:privacy_policy" %}">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 txt-primary text-center">aduna s.r.l.s. - legal head office: via Caduti
+                            di El
+                            Alamein 5, 56123 Pisa
+                            (Italy) <br />
+                            P. IVA: 02500690504</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 my-2 d-lg-flex justify-content-end">
+                <div>
+
+                    <div class="container p-0">
+                        <div class="row justify-content-end">
+                            <div>
+
+                                <h6 class="txt-primary fm-jost fw-400 mb-3">
+                                    Get updated on new releases in your inbox:
+                                </h6>
+
+                                <div class="col-12">
+                                    <form class="" action="{% url "users:newsletter" %}" method="POST">
+
+                                        <div class="container">
+                                            <div class="row justify-content-lg-between">
+                                                <div class="col mb-1 col-lg-9 ps-0 me-2 me-xxl-3">
+                                                    <input type="email" class="form-control col"
+                                                        placeholder="Enter your email" name="email" required>
+                                                </div>
+                                                <div
+                                                    class="col-12 col-lg-2 col-xxl-1 mt-3 mt-lg-0 mb-lg-1 d-flex justify-content-center justify-content-lg-end">
+                                                    <button class="btn btn-2 fm-jost fw-400"
+                                                        type="submit">Submit</button>
+                                                </div>
+                                            </div>
+                                            {% csrf_token %}
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>

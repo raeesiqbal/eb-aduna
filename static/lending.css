@@ -1,0 +1,268 @@
+.animation-outer {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: #efefe5;
+  background-color: #181818;
+  /* cursor: default !important; */
+}
+
+#background-animation {
+  position: relative;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: 0;
+  /* Change z-index to be lower than text */
+}
+
+.r-text-container {
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  top: 42%;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+.r-text-container::before {
+
+
+
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #888;
+}
+
+.text-container {
+  position: relative;
+  top: 10px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+.text {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.animated-text {
+  opacity: 1;
+  /* animation: fadeIn 0s ease forwards; */
+}
+
+.animated-hello-link {
+  opacity: 0;
+  animation: fadeIn 0.75s ease forwards;
+}
+
+.animated-hello {
+  opacity: 0;
+  animation: fadeIn 0.75s ease forwards;
+}
+
+.animated-text-out {
+  opacity: 1;
+  /* animation: fadeOut 0s ease forwards; */
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.text-container h1 {
+  font-size: 12vh;
+  font-weight: bolder;
+  z-index: 3;
+  margin-bottom: 0;
+  font-family: "Jost", sans-serif;
+  font-weight: 800;
+}
+
+.d-none {
+  display: none;
+}
+
+:root {
+  --base-margin: 310px;
+}
+
+/* @media (min-width: 1900px) {
+  :root {
+    --base-margin: 300px;
+  }
+} */
+
+.r-last-part {
+  right: 0;
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.ss {
+
+    user-select: none;
+    pointer-events: none;
+
+
+  position: absolute;
+  top: 48%; /* Aumenta il valore per spostare più in basso */
+  left: 50%; /* Diminuisci il valore per spostare più a sinistra */
+  transform: translate(-50%, -50%);
+}
+
+
+
+.btn-1 {
+  background: #000000;
+  color: #efefe5;
+  border: 1px solid #000000;
+  outline: none;
+  border-radius: 10px;
+}
+
+.btn-1:hover {
+  background: #efefe5;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.btn-2 {
+  background: #dedecd;
+  color: #000000;
+  border: 1px solid #dedecd;
+  outline: none;
+  border-radius: 10px;
+}
+
+.btn-2:hover {
+  background: #efefe5;
+  color: #000000;
+  border: 1px solid #dedecd;
+}
+
+.bg-2 {
+  background: #efefe5;
+}
+
+.modal-content {
+  border: 2px solid #000000;
+}
+
+@media (max-device-width: 768px) {
+  .text-container h1 {
+    font-size: 60px !important;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* home page css */
+
+.our-studio-terms {
+  filter: grayscale(100%);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-15px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#CookieModal .modal-dialog {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  max-width: none;
+  transform: none;
+}
+
+#CookieModal .modal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-device-width: 768px) {
+  #CookieModal .modal-dialog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    max-width: none;
+    transform: none;
+  }
+}
+
+/* home page css */
+img#logo {
+  display: none;
+}

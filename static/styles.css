@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap");
+
+.fm-jost {
+  font-family: "Jost", sans-serif;
+}
+.fm-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+.fw-200 {
+  font-weight: 200;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+.fw-1000 {
+  font-weight: 1000;
+}
+.bg-header {
+  background: #181818;
+}
+
+#nav-icon1 {
+  width: 40px;
+  height: 35px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 80%;
+  background: #efefe5;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 5px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 14px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 24px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 15px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 15px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.text-color {
+  color: #efefe5; /* Colore del testo */
+}
+
+.text-justify {
+  text-align: justify; /* Allineamento del testo */
+}
+
+
+.btn-1 {
+  background: #000000;
+  color: #efefe5;
+  border: 1px solid #000000;
+  outline: none;
+  border-radius: 12px;
+}
+.btn-1:hover {
+  background: #efefe5;
+  border: 1px solid #000000;
+}
+.btn-2 {
+  background: #dedecd;
+  color: #000000;
+  border: 1px solid #dedecd;
+  outline: none;
+  border-radius: 10px;
+}
+.btn-2:hover {
+  background: #efefe5;
+  border: 1px solid #dedecd;
+}
+.bg-light-1 {
+  background: #efefe5 !important;
+}
+.txt-primary {
+  color: #a0a09d;
+}
+.txt-secondary {
+  color: #efefe5;
+  text-align: justify;
+}
+.logo {
+  height: 30px;
+  width: auto;
+}
+.gp56 {
+  position: absolute;
+  height: 500px;
+  width: auto;
+  top: 56px;
+  right: 0;
+}
+.our-studio {
+  background: url(../static/assets/imgs/OUR_STUDIO.gif) no-repeat center center;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/6; /* Questo mantiene il rapporto d'aspetto dell'immagine */
+}
+
+.our-text {
+  position: absolute;
+  transform: rotate(-173deg);
+}
+.our-studio-terms {
+  background: url(../static/assets/imgs/sfondo.JPG);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: none;
+  scale: none;
+}
+.our-studio-outer {
+  min-height: 170px;
+  align-items: stretch;
+  position: relative;
+}
+.our-studio-text {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  z-index: 1;
+  text-align: right;}
+
+.our-studio-text h1 {
+  font-size: 2rem; }
+
+
+.min-h-100 {
+  min-height: 100vh;
+}
+.contact-us-card-spacer {
+  padding-top: 100px;
+  background-color: #181818;
+}
+footer {
+  background: #181818;
+}
+
+.double-chevron img {
+  height: 15px;
+  width: auto;
+}
+.double-chevron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 275%;
+  background-color: rgba(146, 146, 146, 0.1);
+  backdrop-filter: blur(3px);
+}
+
+.footer-container {
+  max-width: 99% !important;
+}
+
+.footer-li-a ul li {
+  font-family: "Jost", sans-serif;
+  list-style: none;
+  color: #a0a09d !important;
+  text-decoration: underline;
+  display: inline-flex !important;
+  margin-left: 10px;
+}
+.footer-li-a ul li a {
+  font-family: "Jost", sans-serif;
+  color: #a0a09d !important;
+  text-decoration: underline;
+}
+.form-control::placeholder {
+  color: #4b4b4c;
+}
+.form-control {
+  background: #272729;
+  border: 2px solid #4b4b4c;
+}
+
+@media (min-device-width: 992px) {
+  .mt-60-lg {
+    margin-top: 60px;
+  }
+  .nav-lg {
+    flex-wrap: nowrap !important;
+    display: block !important;
+  }
+  .nav-lg-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .nav-sm li {
+    margin-right: 18px;
+    color: #efefe5;
+  }
+  .nav-sm li a {
+    color: #efefe5;
+    /* font-size: 30px; */
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .nav-sm li a:hover {
+    color: #efefe5;
+    border-bottom: 1px solid #a0a09d;
+  }
+}
+.nav-control {
+  height: 25px !important;
+  width: auto;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.offcanvas-body {
+  background: #181818;
+}
+.offcanvas-body .nav-item {
+  list-style: none;
+}
+.offcanvas-body .nav-item a {
+  list-style: none;
+  margin-bottom: 20px;
+  font-weight: 900;
+  color: #adacac;
+  font-family: "Jost", sans-serif;
+}
+.offcanvas-body .nav-item a:hover {
+  color: #efefe5;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #181818;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+a {
+  font-family: "Jost", sans-serif !important;
+}
+
+.text-white {
+  color: #efefe5 !important;
+}
+
+
+/* @media (min-device-width: 1200px) {
+  .fs-38 {
+    font-size: 38px;
+  }
+  .fs-50 {
+    font-size: 50px;
+  }
+  .fs-100 {
+    font-size: 100px;
+  }
+} */
+.tohidepass {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.go-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6%;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-15px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bouncing-image {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.contact h1 {
+  font-size: 3rem;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+}
+
+.contact p {
+  font-size: 1rem;
+}
+
+.contact a span {
+  font-size: 1rem;
+}
+
+.contact a {
+  width: 200px;
+  padding: 8px;
+}
+
+@media (min-device-width: 1200px) {
+  .contact h1 {
+    font-size: 5rem;
+  }
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+  .contact p {
+    font-size: 1.5rem;
+  }
+
+  .contact a span {
+    font-size: 1.3rem;
+  }
+  .contact a {
+    width: 250px;
+    padding: 10px;
+  }
+}
+
+.fm-poiret-one {
+  font-family: "Poiret One", sans-serif !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.fixed-top {
+  position: sticky !important;
+  top: 0px !important;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 9998 !important;
+}
+
+/* Giustifica il testo e restringi il contenitore */
+.custom-container {
+  max-width: 800px; /* Restringi la larghezza del contenitore su desktop */
+  margin: 0 auto; /* Centra il contenitore */
+  padding: 0 30px; /* Aggiungi padding a destra e sinistra */
+}
+
+/* Stile per il testo della descrizione */
+.custom-description {
+  margin-bottom: 20px; /* Spazio tra il paragrafo e l'elemento successivo */
+  text-align: justify; /* Giustifica il testo */
+}
+
+/* Stile per l'ultimo paragrafo */
+.custom-discover-more-link {
+  display: block; /* Assicura che il link prenda l'intera larghezza disponibile */
+  text-align: center; /* Centra il testo */
+  font-weight: bold; /* Rende il testo in grassetto */
+  color:   #efefe5; /* Colore del testo */
+  text-decoration: none; /* Rimuove la sottolineatura del link */
+}
+
+.custom-discover-more-link:hover, .custom-discover-more-link:focus {
+  text-decoration: none; /* Assicura che non ci sia sottolineatura anche al passaggio del mouse o al focus */
+}
+
+/* Stili aggiuntivi per schermi piccoli */
+@media (max-width: 767px) {
+  .custom-container {
+      max-width: 100%; /* Larghezza completa su schermi piccoli */
+      padding: 0 15px; /* Aggiungi padding per evitare il testo troppo vicino ai bordi */
+  }
+}

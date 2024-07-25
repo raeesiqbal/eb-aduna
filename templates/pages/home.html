@@ -1,0 +1,465 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+<style>
+    .show-div {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+    }
+
+    .hide-div {
+        opacity: 0;
+        transform: translateY(-20px);
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+</style>
+
+
+<div class="modal fade" id="CookieModal" tabindex="-1" aria-labelledby="CookieModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-2">
+            <div class="modal-header d-none">
+                <h5 class="modal-title" id="CookieModalLabel">Modal Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h1 class="text-dark fw-bold fm-jost text-center">
+                    Terms & Cookies
+                </h1>
+                <h5 class="text-dark fw-bold fm-jost text-center">
+                    By using this website, you agree to our <br /> terms of service and cookie policy.
+                </h5>
+            </div>
+            <div class="modal-footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 my-1">
+                            <a href="{% url "pages:privacy_policy" %}" target="_blank"
+                                class="btn btn-2 fm-jost fw-bolder col-12">
+                                Learn more
+                            </a>
+                        </div>
+                        <div class="col-12 col-lg-6 my-1">
+                            <button type="button" class="btn btn-2 fm-jost fw-bolder col-12"
+                                id="decline-cookies">Decline
+                            </button>
+                        </div>
+                        <div class="col-12 col-lg-6 my-1">
+                            <button type="button" class="btn btn-1 fm-jost fw-bolder col-12" id="accept-cookies">
+                                Accept
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% comment %} Home {% endcomment %}
+<div class="our-studio-terms min-h-100 d-flex align-items-center justify-content-center home position-relative"
+    id="home">
+    <div class="container">
+        <h1 class="fm-poiret-one text-center text-white mb-5 ">
+            aduna develops add-ons BIM and scripts on demand, <br />
+            with a specific focus on construction industry. <br />
+            Pre-established licensed plug-ins for Revit and Excel are also <br /> provided in the website.
+        </h1>
+        <h1 class="fm-poiret-one text-center text-white mb-5">
+            DISCOVER MORE
+        </h1>
+    </div>
+    <div class="go-down d-flex justify-content-center mt-3">
+        <div class=" mt-5">
+            <a href="javascript:void(0)" class="text-center" id="chevron-home"> 
+                <div class="double-chevron">
+                    <img src="{% static "assets/imgs/double-chevron.svg" %}" class="img-fluid" alt="double-chevron">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% comment %} Home Ends Ends {% endcomment %}
+
+{% comment %} Contact Us {% endcomment %}
+<div class="container hide-div" id="studio">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-9">
+            <div class="container-fluid position-relative">
+                <div class="our-studio-text">
+                    <h1 class="fw-900 fm-jost txt-secondary fs-100">
+                        OUR
+                    </h1>
+                    <h1 class="fw-900 fm-jost txt-secondary fs-100">
+                        STUDIO
+                    </h1>
+                </div>
+                <div class="row mb-5 our-studio-outer">
+                    <div class="col-12 col-lg-3 d-none">
+                        <h1 class="fw-900 fm-jost txt-secondary fs-100">
+                            OUR
+                        </h1>
+                        <h1 class="fw-900 fm-jost txt-secondary fs-100">
+                            STUDIO
+                        </h1>
+                    </div>
+                    <div class="col-12 overflow-hidden">
+                        <div class="our-studio">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <p class="txt-secondary fm-inter fw-400">
+                                            We are a team made of AEC Technicians with expertise in <span
+                                                class="fw-bold">Systems, Structures, Architecture and BIM,</span> every
+                                            day handling projects ranging from small to large scale.
+                                            Aduna is born with onw goal: to simplify everyday-tasks
+                                            which take away hundreds of hours of redundand
+                                            work from qualified workers.
+                                        </p>
+                                    </div>
+                                    <div class="col-12  mb-4">
+                                        <h4 class="fw-bold fm-inter txt-secondary">
+                                            Our outomated tools apply
+                                        </h4>
+                                        <p class="txt-secondary fm-inter fw-400">
+                                            mainly to Revit and Excel, but we
+                                            also provide apps which directly
+                                            automate tasks on Windows
+                                            and on the Cloud.
+                                        </p>
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <h4 class="fw-bold fm-inter txt-secondary">
+                                            We provide ready-to-use tools:
+                                        </h4>
+                                        <p class="txt-secondary fm-inter fw-400">
+                                            Pre-defined add-ons can be found <a href=""
+                                                class="txt-secondary text-decoration-underline">here</a>. These products
+                                            will soon be directly purchasable
+                                            from our website, but until then we provide a
+                                            low-priced monthly subscription for their use.
+                                            <a href="" class="txt-secondary text-decoration-underline">Contact us!</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex justify-content-end">
+                                <img src="{% static "assets/imgs/gp56.svg" %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 mb-4">
+                        <h4 class="fw-bold fm-inter txt-secondary">
+                            We also develop add-ons BIM and scripts on demand:
+                        </h4>
+                        <p class="txt-secondary fm-inter fw-400 mb-3">
+                            If you have a personal issue to solve, contact us and we will try to develop it <br />
+                            together!
+                            The collaboration is usually following a pre-defined scheme:
+                        </p>
+                        <div>
+                            <h6 class="txt-secondary mb-0">1 - Briefing phase </h6>
+                            <p class="txt-secondary fm-inter fw-400 mb-3">
+                                Drafting a document in which the company explains us their issues and needs.
+                            </p>
+                        </div>
+                        <div>
+                            <h6 class="txt-secondary mb-0"> 2 - Solution Strategy </h6>
+                            <p class="txt-secondary fm-inter fw-400 mb-3">
+                                Following a first analysis and internal studies, we present a draft of the proposed
+                                solution.
+                            </p>
+                        </div>
+                        <div>
+                            <h6 class="txt-secondary mb-0">3 - Customized tool development </h6>
+                            <p class="txt-secondary fm-inter fw-400 mb-3">
+                                The development period will lead to the desired final solution, which will be provided
+                                to the client for its internal use.
+                            </p>
+                        </div>
+                        <div>
+                            <h6 class="txt-secondary mb-0">4 - Beta test assistance</h6>
+                            <p class="txt-secondary fm-inter fw-400 mb-5">
+                                As for every newly developed software, some tests, support and debugging are often
+                                needed. We always integrate this phase in our proposals so that we can deliver the best
+                                assistance.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="txt-secondary mb-0">
+                                Our productes are built on native and high level languages
+                            </h4>
+                            <p class="txt-secondary fm-inter fw-400 mb-3">
+                                like C#, and not only on the commonly used easy connections like Dynamo for Revit.<br />
+                                This makes all our products faster, healthier and more customizable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-stretch mb-3">
+                    <div class="col-12 col-md-6 col-xl-3 d-flex align-items-stretch justify-content-center">
+                        <div class="row">
+                            <div class="col-12 text-center mb-2">
+                                <img src="{% static "assets/imgs/dg.svg" %}" alt=" Dynamo/ Grasshopper"
+                                    class="img-fluid mb-2">
+                            </div>
+                            <p class="fw-bold fm-inter text-white text-center col-12">
+                                Dynamo/ Grasshopper
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 d-flex align-items-stretch justify-content-center">
+                        <div class="row">
+                            <div class="col-12 text-center mb-2">
+                                <img src="{% static "assets/imgs/python.svg" %}" alt="Python" class="img-fluid">
+                            </div>
+
+                            <p class="fw-bold fm-inter text-white text-center col-12">
+                                Python
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 d-flex align-items-stretch justify-content-center">
+                        <div class="row">
+                            <div class="col-12 text-center mb-2">
+                                <img src="{% static "assets/imgs/vb.svg" %}" alt="VisualBasic" class="img-fluid">
+                            </div>
+
+                            <p class="fw-bold fm-inter text-white text-center col-12">
+                                VisualBasic
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 d-flex align-items-stretch justify-content-center
+                    ">
+                        <div class="row">
+                            <div class="col-12 text-center mb-2">
+                                <img src="{% static "assets/imgs/c#.svg" %}" alt="c#" class="img-fluid">
+                            </div>
+                            <p class="fw-bold fm-inter text-white text-center col-12">
+                                C#
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% comment %} Contact Us Ends {% endcomment %}
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+
+
+<script>
+    $('#exampleModal').on('show.bs.modal', function () {
+        $('html').css('overflow', 'hidden');
+    });
+
+    $('#exampleModal').on('hidden.bs.modal', function () {
+        $('html').css('overflow', 'auto');
+    });
+
+    function modal() {
+        // Check if the cookie_consent cookie exists and is set to true
+        var cookieConsent = getCookie("cookie_consent");
+
+        if (!cookieConsent || cookieConsent === "false") {
+            // If the cookie does not exist or is false, show the modal
+            var modalElement = document.getElementById('CookieModal');
+            var modalInstance = new bootstrap.Modal(modalElement);
+            modalInstance.show();
+
+            document.getElementById('accept-cookies').addEventListener('click', function () {
+                document.cookie = "cookie_consent=true; path=/";
+                modalInstance.hide();
+            });
+            document.getElementById('decline-cookies').addEventListener('click', function () {
+                document.cookie = "cookie_consent=false; path=/";
+                modalInstance.hide();
+            });
+        } else {
+            // If the cookie exists and is true, proceed without showing the modal
+            console.log("User has already given cookie consent.");
+        }
+    }
+
+    // Function to get a cookie by name
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+</script>
+
+<script>
+    let current = "home";
+    let sectionSwitched = false;
+
+    $("#chevron-home").on("click", function () {
+        var $home = $("#home");
+        var $studio = $("#studio");
+        $("#home").remove();
+        $studio.toggleClass('show-div hide-div');
+        current = "studio";
+    });
+
+
+    // Function to handle scroll events
+    function handleScroll() {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = window.scrollY;
+        const scrollPercentage = (scrolled / totalHeight) * 100;
+
+        if (scrollPercentage >= 25 && !sectionSwitched) {
+            if (current === "home") {
+                var $studio = $("#studio");
+                $("#home").remove();
+                $studio.toggleClass('show-div hide-div');
+                window.scrollTo(0, 0);
+                current = "studio";
+            }
+            sectionSwitched = true;
+        } else if (scrollPercentage < 25 && sectionSwitched) {
+            sectionSwitched = false;
+        }
+    }
+
+
+    // Prevent automatic scroll restoration
+    history.scrollRestoration = "manual";
+
+    // Scroll to the top of the page when it loads
+    window.onload = function () {
+        window.scrollTo(0, 0);
+    };
+
+
+    // Listen for scroll events
+    window.addEventListener('scroll', function () {
+        handleScroll(event); // Pass the event object to the function
+    });
+
+
+    // Re-evaluate on window resize
+    window.addEventListener('resize', function () {
+        handleScroll();
+    });
+
+    function debounce(func, delay) {
+        let timeout;
+        return function () {
+            const context = this;
+            const args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(context, args), delay);
+        };
+    }
+
+    const debouncedScrollHandler = debounce(handleScroll, 300);
+    window.addEventListener('scroll', debouncedScrollHandler);
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        modal();
+        // Select all elements with the class '.double-chevron'
+        var doubleChevrons = document.querySelectorAll('.double-chevron');
+        var isHovered = false;
+        var intervalIds = [];
+
+        function startBounce(element) {
+            element.classList.add('bouncing-image');
+        }
+
+        function stopBounce(element) {
+            element.classList.remove('bouncing-image');
+        }
+
+        // Iterate over each double-chevron element
+        doubleChevrons.forEach(function (element) {
+            var intervalId = setInterval(function () {
+                if (!isHovered) {
+                    startBounce(element);
+                    setTimeout(function () {
+                        stopBounce(element);
+                    }, 500);
+                }
+            }, 2000);
+
+            // Store the intervalId for each element
+            intervalIds.push(intervalId);
+
+            // Add event listeners to each element
+            element.addEventListener('mouseenter', function () {
+                isHovered = true;
+                stopBounce(element);
+            });
+
+            element.addEventListener('mouseleave', function () {
+                isHovered = false;
+            });
+        });
+
+        // Add unload event listener to clear all intervals
+        window.addEventListener('unload', function () {
+            intervalIds.forEach(function (intervalId) {
+                clearInterval(intervalId);
+            });
+        });
+    });
+
+    //**************************************************************//
+    function isInViewport(element, offset) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= -offset &&
+            rect.top <=
+            window.innerHeight - offset);
+    }
+
+    function handleAnimationRemoval() {
+        var
+            elements = document.querySelectorAll('.r-fade-effect');
+        elements.forEach(function (element) {
+            if (isInViewport(element, 40)) {
+                element.classList.add('animate__animated', 'animate__fadeIn');
+            }
+        });
+    }
+    window.addEventListener('load', function () {
+        setTimeout(handleAnimationRemoval, 500); // Adjust delay as needed });
+        window.addEventListener('scroll', function () {
+            handleAnimationRemoval();
+        });
+    })
+</script>
+{% endblock javascript %}

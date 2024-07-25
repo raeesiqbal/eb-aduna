@@ -1,0 +1,125 @@
+{% load static %}
+
+<nav class="navbar navbar-light d-none d-lg-block fixed-top bg-header">
+    <div class="container-fluid nav-lg">
+        <div class="row justify-content-between align-items-center">
+            <div class="col d-flex flex-wrap">
+                <a class="nav-link" href="{% url 'pages:lending' %}">
+                    <img src="{% static "assets/imgs/Testo-Aduna completo EFEFE5.png" %}"
+                        class="img-fluid logo terms-logo" alt="Logo">
+                </a>
+            </div>
+            <div class="col">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-lg-content nav-sm">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'pages:studio' %}">STUDIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'pages:contact' %}">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col d-lg-flex justify-content-end">
+                <div>
+                    <div id="nav-icon1" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            $('#nav-icon1').click(function () {
+                                $(this).toggleClass('open');
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<nav class="d-block d-lg-none sticky-top bg-header">
+    <div class="container py-3">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-6"> <a class="nav-link" href="{% url 'pages:lending' %}"><img
+                        src="{% static "assets/imgs/Testo-Aduna completo EFEFE5.png" %}"
+                        class="img-fluid logo terms-logo" alt="Logo"></a>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <div id="nav-icon1">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header bg-black d-flex justify-content-end">
+
+
+        <img data-bs-dismiss="offcanvas" aria-label="Close" src="{% static "assets/imgs/cross.png" %}"
+            class="nav-control cross-icon" alt="cross">
+
+    </div>
+    <div class="offcanvas-body container">
+        <div class="row align-items-stretch mt-5 h-100">
+            <div class="col-12">
+                {% comment %} <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pages:lending' %}">Lending</a>
+                </li> {% endcomment %}
+                <li class="nav-item text-center">
+                    <a class="nav-link text-white" href="{% url 'pages:lending' %}">HOME</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="{% url 'pages:contact' %}">CONTACT</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="{% url 'pages:studio' %}">STUDIO</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="{% url "pages:privacy_policy" %}">Privacy Policy</a>
+                </li>
+
+                <li class="nav-item text-center mb-5">
+                    <a class="nav-link" href="{% url 'pages:terms' %}">TERMS</a>
+                </li>
+            </div>
+            <li class="col-12 nav-item text-center mt-5">
+                <div class="col-12">
+                    <a href="#linkedin" class="me-2 text-decoration-none">
+                        <img src="{% static "assets/imgs/LinkedIn_icon EFEFE5.png" %}" alt="linkedin"
+                            style="width: 31px;">
+                    </a>
+                    <a href="#youtube" class="text-decoration-none">
+                        <img src="{% static "assets/imgs/YouTube_Logo_2017.png" %}" alt="Youtube" style="width: 137px;">
+                    </a>
+                </div>
+            </li>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleNav() {
+        var hamburgerIcon = document.querySelector('.hamburger-icon');
+        var crossIcon = document.querySelector('.cross-icon');
+
+        if (hamburgerIcon.style.display === 'none') {
+            hamburgerIcon.style.display = 'block';
+            crossIcon.style.display = 'none';
+        } else {
+            hamburgerIcon.style.display = 'none';
+            crossIcon.style.display = 'block';
+        }
+    }
+</script>
